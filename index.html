@@ -2,72 +2,88 @@
 <html>
 
 	<head>
+		<meta charset="utf-8"/>
+
 		<title>Shopping List</title>
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+		<link rel="stylesheet" href="css/shoppingstyle.css">
+
 		<style>
-			div.price {
-				position: relative;
-				left: 0px;
-			}
 
 			div.storeandsec {
 				position: relative;
 				right: 0px;
 			}
+
+			div.border {
+				position: static;
+				height: 130px;
+				width: 1000px;
+				border: 1px solid;
+			}
 		</style>
 	</head>
 
 	<body>
-		<h1>Data Entry</h1>
+		<h1>Shopping List</h1>
 
-	<div>
-		<label for="itemname">Item Name:</label>
-		<input id="nameinput" type="text"/>
-		<select>
-		  <option value="priority">Priority</option>
-		  <option value="High">High</option>
-		  <option value="medium">Medium</option>
-		  <option value="low">Low</option>
-		</select>
+	<div class="border">
+		<div>
+			<label for="itemname">Item Name:</label>
+			<input name="itemname" id="itemname" type="text"/>
 
-		<select>
-		  <option value="quantity">Quantity</option>
-		  <option value="one">One</option>
-		  <option value="two">Two</option>
-		  <option value="three">Three</option>
-		  <option value="four">Four</option>
-		  <option value="five">Five</option>
-		  <option value="six">Six</option>
-		  <option value="seven">Seven</option>
-		  <option value="eight">Eight</option>
-		  <option value="nine">Nine</option>
-		  <option value="ten">Ten</option>
-		</select>
+			<label for="qty">Quantity:</label>
+			<select name="quantity" id="qty">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			  <option value="6">6</option>
+			  <option value="7">7</option>
+			  <option value="8">8</option>
+			  <option value="9">9</option>
+			  <option value="10">10</option>
+			</select>
+
+			<label for="priority">Priority:</label>
+			<select name="priority" id="priority">
+			  <option value="High">High</option>
+			  <option value="medium">Medium</option>
+			  <option value="low">Low</option>
+			</select>
+		</div>
+
+		<div class="storeandsec">
+		  <label for="store">Store Name:</label>
+		  <select name="store" id="store">
+		  </select>
+
+		  <label for="category">Store Section:</label>
+		  <select name="category" id="category">
+		  </select>
+
+		  <label for="price">Item Price:</label>
+		  <input name="price" id="price" type="text"/>
+		  <button onclick="clickedon()" class="cs330 btn btn-primary" id=gobutt>Add</button>
+		</div>
 	</div>
 
-	<div class="storeandsec">
-	  <label for="storename">Store Name:</label>
-	  <select>
-			<option value="store">Store</option>
-	  </select>
-
-	  <label for="section">Section:</label>
-	  <select>
-	    <option value="section">Section</option>
-	  </select>
-	</div>
-
-	<div class="price">
-		<label for="itemprice">Item Price:</label>
-		<input id="priceinput" type="text"/>
-		<button id="additem">Add</button>
-	</div>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-	</body>
+	<table class="table table-striped">
+	<thead>
+	<tr>
+		<th></th><th>Item</th><th>Quantity</th><th>Store</th><th>Section</th><th>Price</th>
+	</tr>
+    </thead>
+     <tbody id="shoppinglist"></tbody>
+    </table>
+	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="controller.js?x=2" type=text/javascript></script>
+  <script src="model.js?x=2" type=text/javascript></script>
+  <script src="view.js?x=2" type=text/javascript></script>
+  </body>
 </html>
