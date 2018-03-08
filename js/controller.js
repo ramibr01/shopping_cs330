@@ -1,5 +1,5 @@
-var stores = ['Fareway', 'Ace Hardware', 'Caseys', 'The Hatchery', 'Amundsens']
-var sections = ['Produce', 'Meats', 'Cereal', 'Canned Goods', 'Frozen Foods', 'Dairy', 'Liquor', 'Tools', 'Clothing']
+var stores = ['Grocery', 'Hardware', 'Convenience', 'Bakery']
+var sections = ['Produce', 'Meats', 'Canned Goods', 'Dairy', 'Liquor', 'Tools']
 
 function clickedon() {
     let rowcolids = ['itemname', 'qty', 'store', 'category', 'price']
