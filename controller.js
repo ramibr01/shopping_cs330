@@ -1,4 +1,4 @@
-var stores = ['Fareway', 'Hardware', 'Convenience', 'Bakery']
+var stores = ['Grocery', 'Hardware', 'Convenience', 'Bakery']
 var sections = ['Produce', 'Meats', 'Canned Goods', 'Dairy', 'Liquor', 'Tools']
 
 function clickedon() {
